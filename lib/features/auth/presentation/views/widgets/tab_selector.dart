@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:scholaria1_app/features/auth/presentation/views/login_view.dart';
 import 'package:scholaria1_app/features/auth/presentation/views/widgets/tab_button_selector.dart';
 
-
 class TabSelector extends StatelessWidget {
-  const TabSelector({super.key});
+  final bool isLoginSelected;
+  final VoidCallback onLoginTap;
+  final VoidCallback onSignUpTap;
+
+  const TabSelector({
+    super.key,
+    required this.isLoginSelected,
+    required this.onLoginTap,
+    required this.onSignUpTap,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final String? currentRoute = ModalRoute.of(context)?.settings.name;
-
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 24),
       padding: const EdgeInsets.all(4),
@@ -21,21 +26,13 @@ class TabSelector extends StatelessWidget {
         children: [
           TabButton(
             text: "Log In",
-            isSelected: currentRoute == LoginView.routeName,
-            onTap: () {
-              if (currentRoute != LoginView.routeName) {
-                Navigator.popAndPushNamed(context, LoginView.routeName);
-              }
-            },
+            isSelected: isLoginSelected,
+            onTap: onLoginTap,
           ),
           TabButton(
             text: "Sign Up",
-            //isSelected: currentRoute == SignUpView.id,
-            onTap: () {
-              //if (currentRoute != SignUpView.id) {
-                //Navigator.popAndPushNamed(context, SignUpView.id);
-              //}
-            }, isSelected: false,
+            isSelected: !isLoginSelected,
+            onTap: onSignUpTap,
           ),
         ],
       ),

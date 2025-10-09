@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scholaria1_app/core/utils/app_images.dart';
-import 'package:scholaria1_app/features/auth/presentation/views/sign_up_view.dart';
+import 'package:scholaria1_app/features/auth/presentation/views/login_view.dart';
 import 'package:scholaria1_app/features/auth/presentation/views/widgets/custom_button_app.dart';
 import 'package:scholaria1_app/features/auth/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:scholaria1_app/features/auth/presentation/views/widgets/dont_have_an_account_widget.dart';
@@ -9,8 +9,10 @@ import 'package:scholaria1_app/features/auth/presentation/views/widgets/or_divid
 import 'package:scholaria1_app/features/auth/presentation/views/widgets/social_buttons.dart';
 import 'package:scholaria1_app/features/auth/presentation/views/widgets/tab_selector.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SignUpViewBody extends StatelessWidget {
+  const SignUpViewBody({super.key});
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +24,13 @@ class LoginViewBody extends StatelessWidget {
         children: [
           const Header(),
           SizedBox(height: height * 0.03),
-
           TabSelector(
-            isLoginSelected: true,
-            onLoginTap: () {},
-            onSignUpTap: () {
-              Navigator.pushReplacementNamed(context, SignUpView.routeName);
+            isLoginSelected: false,
+            onLoginTap: () {
+              Navigator.pushReplacementNamed(context, LoginView.routeName);
             },
+            onSignUpTap: () {},
           ),
-
           SizedBox(height: height * 0.03),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -59,14 +59,22 @@ class LoginViewBody extends StatelessWidget {
             svgAsset: Assets.imagesEye,
             isPassword: true,
           ),
+          SizedBox(height: height * 0.02),
+          CustomTextFormField(
+            label: 'Confirm password',
+            hint: 'Enter your password',
+            keyboardType: TextInputType.visiblePassword,
+            svgAsset: Assets.imagesEye,
+            isPassword: true,
+          ),
           SizedBox(height: height * 0.01),
-          const DontHaveAnAccountWidget(
-            text1: 'Remember me',
-            text2: '     Forgot Password ?',
+          DontHaveAnAccountWidget(
+            text1: 'Agree With ',
+            text2: '     Terms&Conditions',
           ),
           SizedBox(height: height * 0.02),
           CustomButtonApp(
-            title: 'Log In',
+            title: 'Continue',
             onPressed: () {},
           ),
         ],

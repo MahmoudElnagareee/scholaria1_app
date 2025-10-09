@@ -23,19 +23,18 @@ class TabButton extends StatelessWidget {
     return Expanded(
       child: GestureDetector(
         onTap: onTap,
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: height * 0.01),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: EdgeInsets.symmetric(vertical: height * 0.012),
           decoration: BoxDecoration(
             color: isSelected ? Colors.white : Colors.transparent,
-            borderRadius: BorderRadius.circular(
-              width * 0.02,
-            ), 
+            borderRadius: BorderRadius.circular(width * 0.025),
             boxShadow: isSelected
                 ? [
                     BoxShadow(
-                      color: KPrimaryColor.withOpacity(0.15),
-                      blurRadius: width * 0.025,
-                      offset: Offset(0, height * 0.003),
+                      color: KPrimaryColor.withOpacity(0.25),
+                      blurRadius: width * 0.03,
+                      offset: Offset(0, height * 0.004),
                     ),
                   ]
                 : [],
@@ -44,7 +43,7 @@ class TabButton extends StatelessWidget {
             child: Text(
               text,
               style: AppTextStyles.comfortaaMedium(
-                fontSize: width * 0.035, 
+                fontSize: width * 0.035,
                 color: isSelected ? KPrimaryColor : Colors.grey,
               ),
             ),
