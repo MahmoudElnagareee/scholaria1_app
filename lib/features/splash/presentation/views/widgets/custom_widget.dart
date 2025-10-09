@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:scholaria1_app/constants.dart';
+import 'package:scholaria1_app/core/utils/app_text_styles.dart';
 
 class CustomWidget extends StatelessWidget {
   const CustomWidget({super.key, this.onPressed});
@@ -16,12 +18,7 @@ class CustomWidget extends StatelessWidget {
         Text(
           'Learn Anything, Anywhere',
           textAlign: TextAlign.center,
-          style: TextStyle(
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w600,
-            fontSize: 36,
-            color: Colors.white,
-          ),
+          style: AppTextStyles.poppinsSemiBold(fontSize: width * 0.08, color: Colors.white),
         ),
 
         SizedBox(height: height * 0.03),
@@ -37,12 +34,8 @@ class CustomWidget extends StatelessWidget {
             elevation: 0,
           ),
           child: Text(
-            'Get Start',
-            style: TextStyle(
-              fontSize: width * 0.045,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xff0C2960),
-            ),
+            'Get Started',
+            style: AppTextStyles.poppinsSemiBold(fontSize: width * 0.05, color: KPrimaryColor),
           ),
         ),
       ],

@@ -2,21 +2,21 @@
 class Assets {
   Assets._();
   
-  /// Assets for images2021FacebookIcon 1
-  /// assets/images/2021_Facebook_icon 1.svg
-  static const String images2021FacebookIcon = "assets/images/2021_Facebook_icon 1.svg";
+  /// Assets for imagesApple
+  /// assets/images/Apple.svg
+  static const String imagesApple = "assets/images/Apple.svg";
 
-  /// Assets for imagesAnother Step login
-  /// assets/images/Another Step login.svg
-  static const String imagesAnother_login = "assets/images/Another Step login.svg";
+  /// Assets for imagesEye
+  /// assets/images/eye.svg
+  static const String imagesEye = "assets/images/eye.svg";
 
-  /// Assets for imagesAppleLogoSvgrepoCom 1
-  /// assets/images/apple-logo-svgrepo-com 1.svg
-  static const String imagesAppleLogoSvgrepoCom  = "assets/images/apple-logo-svgrepo-com 1.svg";
+  /// Assets for imagesFacebook
+  /// assets/images/Facebook.svg
+  static const String imagesFacebook = "assets/images/Facebook.svg";
 
   /// Assets for imagesGoogle
-  /// assets/images/google.svg
-  static const String imagesGoogle = "assets/images/google.svg";
+  /// assets/images/Google.svg
+  static const String imagesGoogle = "assets/images/Google.svg";
 
   /// Assets for imagesGroup 1686557096
   /// assets/images/Group 1686557096.svg
@@ -30,16 +30,20 @@ class Assets {
   /// assets/images/Group 1686557102.jpg
   static const String imagesGroup_1686557102 = "assets/images/Group 1686557102.jpg";
 
+  /// Assets for imagesLinkedin
+  /// assets/images/Linkedin.svg
+  static const String imagesLinkedin = "assets/images/Linkedin.svg";
+
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
 
-  /// Assets for imagesSkillIconsLinkedin
-  /// assets/images/skill-icons_linkedin.svg
-  static const String imagesSkillIconsLinkedin = "assets/images/skill-icons_linkedin.svg";
-
   /// Assets for imagesStar
   /// assets/images/Star.png
   static const String imagesStar = "assets/images/Star.png";
+
+  /// Assets for imagesUser
+  /// assets/images/user.svg
+  static const String imagesUser = "assets/images/user.svg";
 }
 
